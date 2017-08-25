@@ -1,0 +1,64 @@
+extends auth
+
+block content
+  .full-page.login-page(filter-color='purple', data-image='/assets/img/card-1.jpeg')
+    .content
+      .container
+        .row
+          .col-md-4.col-sm-6.col-md-offset-4.col-sm-offset-3
+            form(method='POST')
+              input(type='hidden', name='_csrf', value=_csrf)
+              .card.card-login.card-hidden
+                .card-header.text-center(data-background-color='blue')
+                  h4.card-title Login
+                  .social-line
+                    a.btn.btn-just-icon.btn-simple(href='#facebook')
+                      i.fa.fa-facebook-square
+                    a.btn.btn-just-icon.btn-simple(href='#twitter')
+                      i.fa.fa-twitter
+                    a.btn.btn-just-icon.btn-simple(href='#google')
+                      i.fa.fa-google-plus
+                p.category.text-center
+                  | Or Be Classical
+                .card-content
+                  include ../partials/flash
+                  .input-group
+                    span.input-group-addon
+                      i.material-icons email
+                    .form-group.label-floating
+                      label.control-label Username or Email
+                      input.form-control(type='text', name='username')
+                  .input-group
+                    span.input-group-addon
+                      i.material-icons lock_outline
+                    .form-group.label-floating
+                      label.control-label Password
+                      input.form-control(type='password', name='password')
+                .footer.text-center
+                  button.btn.btn-rose.btn-simple.btn-wd.btn-lg(type='submit') Let's go
+    footer.footer
+      .container
+        p.copyright.pull-center
+          | © &nbsp;
+          script.
+            document.write(new Date().getFullYear())
+          a(href='http://fibo.vn') &nbsp;Fibo
+          | , made with love for a better web
+    .full-page-background(style='background-image: url(/assets/img/card-1.jpeg) ')
+block scripts
+  script.
+    $(document).ready(function() {
+        setTimeout(function() {
+            // after 1000 ms we add the class animated to the login/register card
+            $('.card').removeClass('card-hidden');
+        }, 700)
+    });
+
+  //- .login-page
+  //-   include ../partials/flash
+  //-   .form
+  //-     form.login-form(method='POST')
+  //-       input(type='hidden', name='_csrf', value=_csrf)
+  //-       input(type='email', name='email' placeholder='Email')
+  //-       input(type='password', name='password' placeholder='password')
+  //-       button login

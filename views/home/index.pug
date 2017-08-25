@@ -1,0 +1,16 @@
+extends ../layout
+
+block styles
+
+block content
+  .container-fluid
+    .row
+      .col-md-12
+        .card
+          .card-header.card-header-icon(data-background-color='blue')
+            i.material-icons dashboard
+          .card-content
+            h4 Hello
+
+block scripts
+  script(src='/assets/pages/home.js?v=1')

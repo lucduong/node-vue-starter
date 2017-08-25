@@ -1,0 +1,34 @@
+nav.navbar.navbar-transparent.navbar-absolute
+  .container-fluid
+    .navbar-minimize
+      button#minimizeSidebar.btn.btn-round.btn-white.btn-fill.btn-just-icon
+        i.material-icons.visible-on-sidebar-regular more_vert
+        i.material-icons.visible-on-sidebar-mini view_list
+    .navbar-header
+      button.navbar-toggle(type='button', data-toggle='collapse')
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand(href='#')= title
+    .collapse.navbar-collapse
+      ul.nav.navbar-nav.navbar-right
+        li
+          a.dropdown-toggle(href='/', data-toggle='dropdown')
+            i.material-icons dashboard
+            p.hidden-lg.hidden-md Home
+        li
+          a.dropdown-toggle(href='/', data-toggle='dropdown')
+            i.material-icons person
+            p.hidden-lg.hidden-md Profile
+          ul.dropdown-menu
+            li
+              a(href='/signout') Logout
+        li.separator.hidden-lg.hidden-md
+      form.navbar-form.navbar-right(role='search')
+        .form-group.form-search.is-empty
+          input.form-control(type='text', placeholder='Search')
+          span.material-input
+        button.btn.btn-white.btn-round.btn-just-icon(type='submit')
+          i.material-icons search
+          .ripple-container

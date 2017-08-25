@@ -1,0 +1,32 @@
+doctype html
+html
+  head
+    title 404 - File Not Found
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
+    link(href='/css/404.css', rel='stylesheet', type='text/css', media='all')
+  body
+    .wrap
+      .content
+        .logo
+          h1
+            a(href='#')
+              img(src='images/logo.png')
+          span
+            img(src='images/signal.png')
+            | Oops! File not Found
+        .buttom
+          .seach_bar
+            p
+              | You can go back to 
+              span
+                a(href='/') Home
+              |  Or Search...
+            .search_box
+              form
+                input(type='text', value='Search', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Search...';}")
+                input(type='submit', value='')
+      p.copy_right
+        | © 2017 &nbsp;
+        a(href='https://ltv.vn', target='_blank') LTV Co., Ltd

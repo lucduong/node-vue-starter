@@ -1,0 +1,27 @@
+.sidebar(data-active-color='blue', data-background-color='black', data-image='/assets/img/sidebar-1.jpg')
+  .logo
+    a.simple-text(href='/')
+      | Fibo
+  .logo.logo-mini
+    a.simple-text(href='/')
+      | Fibo
+  .sidebar-wrapper
+    .user
+      .photo
+        img(src='/assets/img/faces/avatar.jpg')
+      .info
+        a.collapsed(data-toggle='collapse', href='#collapseExample')
+          span= user.profile.name || user.username
+          | &nbsp;
+          b.caret
+        #collapseExample.collapse
+          ul.nav
+            li
+              a(href='#') My Profile
+            li
+              a(href='#') Settings
+    ul.nav
+      li(class=activePage=="" ? "active" : "")
+        a(href='/')
+          i.material-icons dashboard
+          p Dashboard
